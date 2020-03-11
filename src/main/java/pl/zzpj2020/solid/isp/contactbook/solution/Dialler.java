@@ -1,5 +1,11 @@
 package pl.zzpj2020.solid.isp.contactbook.solution;
 
-public interface Dialler {
-    void makeCall();
+class Dialler {
+	
+    public void makeCall(Dialable dialable) {
+    	
+    	String telephone = dialable.getPhoneNumber();
+    	
+    	// call using telephone
+    }
 }

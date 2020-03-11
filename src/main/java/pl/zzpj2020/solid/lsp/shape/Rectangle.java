@@ -1,24 +1,22 @@
 package pl.zzpj2020.solid.lsp.shape;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure{
 
-    private double b;
+    private double width;
+    private double length;
 
-    public double getB() {
-        return b;
-    }
-
-    public void setB(double b) {
-        this.b = b;
+    public Rectangle(double width, double length) {
+        this.width = width;
+        this.length = length;
     }
 
     @Override
     public double countCircuit() {
-        return super.getA() * this.b;
+        return this.width * 2 + this.length * 2;
     }
 
     @Override
     public double countSurface() {
-        return super.getA() * 2 + this.b * 2;
+        return this.width * this.length;
     }
 }
